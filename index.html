@@ -616,6 +616,159 @@ nav {
   font-weight: 500;
 }
 
+/* ===== REDESIGNED GROUP SECTION ===== */
+.group-section {
+  border-top: 1px solid var(--border);
+}
+
+.group-hero {
+  margin-bottom: 48px;
+}
+
+.group-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  max-width: 800px;
+}
+
+.group-title .highlight {
+  color: var(--accent);
+}
+
+.group-stats {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 32px 0;
+  margin-bottom: 56px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.group-stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.group-stat-value {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.group-stat-label {
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 500;
+}
+
+.group-stat-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+.group-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.group-image {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.group-image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 3/4;
+  filter: brightness(0.85) saturate(0.9);
+  transition: filter 0.4s ease;
+}
+
+.group-image:hover img {
+  filter: brightness(0.95) saturate(1);
+}
+
+.group-image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 20px;
+  background: linear-gradient(transparent, rgba(6, 8, 15, 0.85));
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.group-story p {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  font-weight: 300;
+}
+
+.group-story strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.group-ticker-inline {
+  margin-top: 32px;
+  max-width: 320px;
+}
+
+.group-ticker-inline canvas {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .group-stats {
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+  }
+  .group-stat-divider {
+    display: none;
+  }
+  .group-stat {
+    flex: 0 0 40%;
+  }
+  .group-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .group-image {
+    max-height: 400px;
+  }
+  .group-ticker-inline {
+    max-width: 260px;
+    margin: 24px auto 0;
+  }
+}
+
 /* ===== PARAGON MOSAIC ===== */
 .paragon-mosaic {
   display: grid;
@@ -2579,32 +2732,55 @@ footer .footer-badge {
 </section>
 
 <!-- Paragon Group -->
-<section class="section" id="about">
+<section class="section group-section" id="about">
   <div class="section-label">The Group</div>
-  <!-- Row 1: Bold statement (left) + Photo (right) -->
-  <div class="about-grid">
-    <div class="about-statement reveal">
-      <span class="highlight">Paragon Group</span> is one of Bangladesh's largest conglomerates - <span class="highlight">12,000+ employees</span>, 20+ companies, and operations spanning 12+ industries with international business connections worldwide.
+  
+  <!-- Hero statement - full width, cinematic -->
+  <div class="group-hero reveal">
+    <h2 class="group-title">
+      <span class="highlight">Paragon Group</span> is one of Bangladesh's largest conglomerates
+    </h2>
+  </div>
+
+  <!-- Stats strip -->
+  <div class="group-stats reveal">
+    <div class="group-stat">
+      <span class="group-stat-value">12,000+</span>
+      <span class="group-stat-label">Employees</span>
     </div>
-    <div class="paragon-portrait reveal">
-      <img src="./profile-images/mahir-speaking.jpg" alt="Mahir Rahman speaking at Paragon Night 2025" loading="lazy">
+    <div class="group-stat-divider"></div>
+    <div class="group-stat">
+      <span class="group-stat-value">20+</span>
+      <span class="group-stat-label">Companies</span>
+    </div>
+    <div class="group-stat-divider"></div>
+    <div class="group-stat">
+      <span class="group-stat-value">12+</span>
+      <span class="group-stat-label">Industries</span>
+    </div>
+    <div class="group-stat-divider"></div>
+    <div class="group-stat">
+      <span class="group-stat-value">30+</span>
+      <span class="group-stat-label">Years</span>
     </div>
   </div>
 
-  <!-- Row 2: Ticker (left) + Description text (right) -->
-  <div class="about-grid" style="margin-top: 48px;">
-    <div class="paragon-ticker reveal">
-      <div class="ticker-card">
+  <!-- Photo + Story side by side -->
+  <div class="group-content reveal">
+    <div class="group-image">
+      <img src="./profile-images/mahir-speaking.jpg" alt="Mahir Rahman speaking at Paragon Night 2025" loading="lazy">
+      <div class="group-image-caption">Paragon Night 2025</div>
+    </div>
+    <div class="group-story">
+      <p>
+        In 1993, my parents — <strong>Moshiur Rahman</strong> and <strong>Yasmin Rahman</strong> — started with a single poultry farm of 25,000 parent stock and a vision to build something lasting. Over three decades, they grew that into <strong>Paragon Group</strong>: one of Bangladesh's top agro-industrial conglomerates, headquartered at Paragon House in Mohakhali, Dhaka.
+      </p>
+      <p>
+        Today the group spans <strong>poultry farming, animal feed, processing plants, plastics & FIBC, consumer foods, tea estates, solar energy, fisheries, flour mills, dairy, retail, and export footwear</strong>. I represent the next generation — bringing a computer science background and an AI-first mindset to a business built on decades of operational excellence.
+      </p>
+      <div class="group-ticker-inline">
         <canvas id="tickerCanvas" width="400" height="400"></canvas>
       </div>
-    </div>
-    <div class="about-details">
-      <p class="reveal">
-        In 1993, my parents - <strong>Moshiur Rahman</strong> and <strong>Yasmin Rahman</strong> - started with a single poultry farm of 25,000 parent stock and a vision to build something lasting. Over three decades, they grew that into <strong>Paragon Group</strong>: one of Bangladesh's top agro-industrial conglomerates, headquartered at Paragon House in Mohakhali, Dhaka.
-      </p>
-      <p class="reveal">
-        Today the group spans <strong>poultry farming, animal feed, processing plants, plastics & FIBC, consumer foods, tea estates, solar energy, fisheries, flour mills, dairy, retail, and export footwear</strong>. I represent the next generation - bringing a computer science background and an AI-first mindset to a business built on decades of operational excellence.
-      </p>
     </div>
   </div>
 </section>
