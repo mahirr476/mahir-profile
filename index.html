@@ -1206,72 +1206,6 @@ nav {
   font-weight: 300;
 }
 
-/* ===== ROLE NUMBERED LIST (IT & Transport) ===== */
-.role-numbered {
-  max-width: 860px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.role-num-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 40px;
-  padding: 40px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-}
-
-.role-num-item:first-child {
-  border-top: 1px solid rgba(255,255,255,0.06);
-}
-
-.role-num {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 3.5rem;
-  font-weight: 700;
-  color: rgba(255,255,255,0.08);
-  line-height: 1;
-  flex-shrink: 0;
-  width: 80px;
-  transition: color 0.4s ease;
-}
-
-.role-num-item:hover .role-num {
-  color: var(--accent);
-}
-
-.role-num-body {
-  flex: 1;
-  padding-top: 8px;
-}
-
-.role-num-title {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin: 0 0 12px 0;
-}
-
-.role-num-desc {
-  font-size: 0.92rem;
-  color: var(--text-secondary);
-  line-height: 1.8;
-  font-weight: 300;
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  .role-num-item {
-    gap: 20px;
-    padding: 28px 0;
-  }
-  .role-num {
-    font-size: 2.2rem;
-    width: 50px;
-  }
-}
-
 /* ===== PARASOLE IMAGES ===== */
 .parasole-images {
   display: grid;
@@ -2902,34 +2836,26 @@ footer .footer-badge {
       </p>
     </div>
   </div>
-  <div class="role-numbered" style="margin-top: 48px;">
-    <div class="role-num-item reveal">
-      <div class="role-num">01</div>
-      <div class="role-num-body">
-        <h3 class="role-num-title">Vehicle Logistics & Route Planning</h3>
-        <p class="role-num-desc">A fleet of ~350 vehicles operating nationwide across all Paragon companies. Approval workflows, route optimization, and real-time coordination — serving poultry farms, feed mills, processing plants, and factories.</p>
-      </div>
+  <div class="builds-grid" style="margin-top: 48px;">
+    <div class="build-card reveal hoverable">
+      <div class="build-icon">🚛</div>
+      <div class="build-title">Vehicle Logistics & Route Planning</div>
+      <div class="build-desc">A fleet of ~350 vehicles operating nationwide across all Paragon companies. Approval workflows, route optimization, and real-time coordination - serving poultry farms, feed mills, processing plants, and factories.</div>
     </div>
-    <div class="role-num-item reveal">
-      <div class="role-num">02</div>
-      <div class="role-num-body">
-        <h3 class="role-num-title">Group-Wide IT</h3>
-        <p class="role-num-desc">Technology strategy for 15+ companies and 12,000 employees. Internal tools built to the design standard of Linear and Vercel — because enterprise software doesn't have to be ugly.</p>
-      </div>
+    <div class="build-card reveal hoverable">
+      <div class="build-icon">⚡</div>
+      <div class="build-title">Group-Wide IT</div>
+      <div class="build-desc">Technology strategy for 15+ companies and 12,000 employees. Internal tools built to the design standard of Linear and Vercel - because enterprise software doesn't have to be ugly.</div>
     </div>
-    <div class="role-num-item reveal">
-      <div class="role-num">03</div>
-      <div class="role-num-body">
-        <h3 class="role-num-title">Claude-Powered Operations</h3>
-        <p class="role-num-desc">Claude running 24/7 across my departments. Production data parsed from WhatsApp photos, email intelligence pipelines, automated reporting — real AI in real industry.</p>
-      </div>
+    <div class="build-card reveal hoverable">
+      <div class="build-icon">🤖</div>
+      <div class="build-title">Claude-Powered Operations</div>
+      <div class="build-desc">Claude running 24/7 across my departments. Production data parsed from WhatsApp photos, email intelligence pipelines, automated reporting - real AI in real industry.</div>
     </div>
-    <div class="role-num-item reveal">
-      <div class="role-num">04</div>
-      <div class="role-num-body">
-        <h3 class="role-num-title">Custom Software</h3>
-        <p class="role-num-desc">Full-stack React + PostgreSQL dashboards, operations hubs, and management tools — all built in-house with my software team. Designed, architected, and deployed by me.</p>
-      </div>
+    <div class="build-card reveal hoverable">
+      <div class="build-icon">🎨</div>
+      <div class="build-title">Custom Software</div>
+      <div class="build-desc">Full-stack React + PostgreSQL dashboards, operations hubs, and management tools - all built in-house with my software team. Designed, architected, and deployed by me.</div>
     </div>
   </div>
 </section>
