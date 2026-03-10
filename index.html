@@ -734,6 +734,54 @@ nav {
   font-weight: 500;
 }
 
+.group-industries-card {
+  margin-top: 32px;
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.group-industries-header {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-tertiary);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.group-industries-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ind-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-weight: 400;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.ind-chip:hover {
+  border-color: rgba(108, 142, 239, 0.25);
+  background: rgba(108, 142, 239, 0.04);
+}
+
+.ind-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
 
 
 @media (max-width: 768px) {
@@ -2765,6 +2813,25 @@ footer .footer-badge {
       <p>
         Today the group spans <strong>poultry farming, animal feed, processing plants, plastics & FIBC, consumer foods, tea estates, solar energy, fisheries, flour mills, dairy, retail, and export footwear</strong>. I represent the next generation — bringing a computer science background and an AI-first mindset to a business built on decades of operational excellence.
       </p>
+
+      <!-- Industry map -->
+      <div class="group-industries-card">
+        <div class="group-industries-header">Operating across</div>
+        <div class="group-industries-grid">
+          <div class="ind-chip"><span class="ind-dot" style="background:#6C8EEF"></span>Poultry & Hatchery</div>
+          <div class="ind-chip"><span class="ind-dot" style="background:#A78BFA"></span>Animal Feed</div>
+          <div class="ind-chip"><span class="ind-dot" style="background:#EAB348"></span>Food Processing</div>
+          <div class="ind-chip"><span class="ind-dot" style="background:#40a578"></span>Export Footwear</div>
+          <div class="ind-chip"><span class="ind-dot" style="background:#EF6C6C"></span>Plastics & FIBC</div>
+          <div class="ind-chip"><span class="ind-dot" style="background:#6CC8EF"></span>Consumer Foods</div>
+          <div class="ind-chip"><span class="ind-dot" style="background:#DA7756"></span>Tea Estates</div>
+          <div class="ind-chip"><span class="ind-dot" style="background:#E8926A"></span>Solar Energy</div>
+          <div class="ind-chip"><span class="ind-dot" style="background:#8B9FEF"></span>Fisheries</div>
+          <div class="ind-chip"><span class="ind-dot" style="background:#B0A0D4"></span>Flour Mills</div>
+          <div class="ind-chip"><span class="ind-dot" style="background:#7CC89E"></span>Dairy & Retail</div>
+          <div class="ind-chip"><span class="ind-dot" style="background:#D4A843"></span>Transport & Logistics</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
